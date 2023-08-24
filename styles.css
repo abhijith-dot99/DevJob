@@ -1,0 +1,578 @@
+body {
+    font-family: 'Kumbh Sans';    
+    margin: 0;
+    padding: 0;
+    background: #F4F6F8;
+}
+
+.topnav {
+    background-color: #5964E0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 160px;
+    border-radius: 0px 0px 0px 100px;
+    flex-direction: row;
+}
+
+.DevJob {
+    color: white;
+    margin: 0;
+}
+
+.DevJob h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* .theme-toggle {
+    color: white;
+    display: flex;
+    align-items: center;
+    
+} */
+
+.icon {
+    font-size: 20px;
+    margin: 0 5px;
+    position: relative;
+    top: -5vh;
+    width: 50px;
+    height: 50px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.searchandCard{
+    padding: 50px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* bottom: 10vh; */
+}
+
+.search-area {
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 15px;
+
+    position: relative;
+    bottom: 15vh;
+    border-radius: 6px;
+}
+.search-section{
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #ccc;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+.search-label {
+    color: white;
+    margin-right: 5px;
+}
+
+.search-button {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 16px;
+}
+
+/* CSS for the card container */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+    gap: 20px; /* Adjust the spacing between cards as needed */
+    /* background-color: #ffffff;    */
+   
+    
+}
+
+/* CSS for each card (customize as needed) */
+.card {
+    background-color: white;
+
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+  
+}
+.card .location{
+    color: #5964E0;
+}
+.card .logo{
+    width: auto;
+}
+.loadmore-btn{
+    display: flex;
+    padding-top: 10vh;
+    justify-content: center;
+    margin-bottom: 8vh;
+}
+
+
+button {
+    color: #ffffff;
+    background-color: #5964e0;
+    font-size: 16px;
+    border: 1px solid #2d63c8;
+    border-radius: 5px;
+    padding: 15px 40px;
+    cursor: pointer
+}
+button:hover {
+    /* color: #ffffff; */
+    background-color: #939bf4;
+}
+
+
+
+
+
+
+
+
+
+.mobile-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* For positioning the modal */
+    display: none;
+}
+
+.options-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* Modal styles */
+.options-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 500; /* Ensure the modal is on top */
+}
+
+.options-content {
+    background-color: #fff;
+    max-width: 300px; /* Adjust the width as needed */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.options-content label {
+    display: block;
+    margin-bottom: 10px;
+}
+.mobile-search-button{
+    display: none;
+}
+.search-button{
+    display: block;
+}
+.desktop-options{
+    display: flex;    
+}
+
+
+.devandtoggle{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.DevJob{
+    float: left;
+    /* width: 10%; */
+}
+theme-toggle{
+    float: left;
+    /* width: 10%; */
+}
+/* Button styles */
+.theme-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    position: relative;
+     /* Adjust the button height as needed */
+}
+
+/* SVG icon styles */
+.theme-toggle svg {
+    /* width: 100%; */
+    transition: transform 0.3s ease; /* Add a transition for smooth animation */
+}
+
+/* Define the initial position of the SVG */
+.theme-toggle.svg-toggle-off svg {
+    transform: translateX(0);
+}
+
+/* Define the toggled position of the SVG */
+.theme-toggle.svg-toggle-on svg {
+    transform: translateX(16px); /* Adjust the distance the icon should move */
+}
+
+
+
+/* The Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+  }
+  
+  /* Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+
+
+/* Light Theme */
+.theme-light {
+    background-color: #F4F6F8;
+}
+
+.theme-light .card {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.theme-light .card h2 {
+    color: #19202D;
+}
+
+.theme-light .icon {
+    border-color: #333333;
+}
+
+/* Dark Theme */
+.theme-dark {
+    background-color: #121721;
+}
+
+.theme-dark .card {
+    background-color:#19202D;
+    color: #ffffff;
+}
+
+.theme-dark .card h2 {
+    color: #ffffff;
+}
+
+.theme-dark .icon {
+    border-color: #ffffff;
+}
+
+
+/* Light Theme */
+.theme-light {
+    background-color: #F4F6F8;
+    color: #000000;
+}
+
+.theme-light .search-area {
+    background-color: #FFF;
+    color: #000000;
+    
+}
+.theme-light .search-area input[type="text"] {
+    background-color: #F4F6F8;
+    color: #000000;
+}
+
+/* Dark Theme */
+.theme-dark {
+    background-color: #121721;
+    color: #ffffff;
+}
+
+.theme-dark .search-area {
+    background-color: #19202D;;
+    color: #ffffff;
+  
+}
+.theme-dark .search-area input[type="text"] {
+    background-color: #121721;
+    color: #ffffff;
+}
+
+
+
+
+
+
+/* for jobdetails */
+/* Styling for the job details section */
+#jobDetails {
+    display: none;
+    background-color: #fff; /* Background color for job details section */
+    margin: 20px; /* Add margin around the job details section */
+    padding: 20px; /* Add padding inside the job details section */
+    border-radius: 5px; /* Rounded corners for the job details section */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle depth effect */
+    text-align: center; /* Center-align text within the job details section */
+}
+
+#jobDetails .title-bar {
+    background-color: #f0f0f0; /* Background color for the title bar */
+    padding: 10px; /* Add padding to the title bar */
+    border-bottom: 1px solid #ccc; /* Add a bottom border to separate it from content */
+}
+
+#jobDetails .title-bar img {
+    max-width: 100px; /* Limit the max width of the company logo */
+    vertical-align: middle; /* Vertically align the logo within the title bar */
+}
+
+#jobDetails .title-bar .company-info {
+    display: inline-block; /* Display the company info side by side with the logo */
+    margin-left: 20px; /* Add some margin to separate the logo from company info */
+    vertical-align: middle; /* Vertically align company info with the logo */
+    text-align: left; /* Left-align company info text */
+}
+
+#jobDetails .title-bar .company-info h2 {
+    margin: 0; /* Remove margin for h2 element */
+    font-size: 20px; /* Set the font size for company name */
+}
+
+#jobDetails .title-bar .company-info .company-site {
+    color: #0073e6; /* Company site link color */
+    margin-top: 5px; /* Add some top margin for the link */
+}
+
+#jobDetails .title-bar .company-info .company-site a {
+    text-decoration: none; /* Remove underline from the link */
+}
+
+#jobDetails .apply-button {
+    margin-top: 20px; /* Add top margin for the apply button */
+}
+
+#jobDetails .info-area {
+    text-align: left; /* Left-align text within the info area */
+    margin-top: 20px; /* Add top margin to separate it from the title bar */
+}
+
+#jobDetails .info-area p {
+    color: #6E8098; /* Text color for postedAt, contract, etc. */
+    margin: 5px 0; /* Add some margin between paragraphs */
+}
+
+#jobDetails .info-area .apply-now-button {
+    background-color: #0073e6; /* Background color for the apply now button */
+    color: #fff; /* Text color for the button */
+    padding: 10px 20px; /* Add padding to the button */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Rounded corners for the button */
+    text-decoration: none; /* Remove underline from the button */
+    font-weight: bold; /* Bold text for the button */
+    margin-top: 20px; /* Add top margin for the button */
+    display: inline-block; /* Make the button an inline block element */
+    cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+#jobDetails .info-area .apply-now-button:hover {
+    background-color: #0056b3; /* Background color on button hover */
+}
+
+
+
+
+
+
+
+
+  
+
+
+@media screen and (max-width: 320px) {
+
+    .topnav{
+        border-radius: 0%;
+        height: 136px;
+    }
+
+    .DevJob h1 {
+        font-size: 24px;
+    }
+
+    .icon {
+        font-size: 20px;
+        width: 31px;
+        height: 38px;
+    }
+    .card-container{
+    
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px;
+    }
+  
+    .search-area {
+        flex-direction: row;
+      
+        /* width: 100%; */
+    }
+
+    .search-section {
+        margin-bottom: 10px;
+        /* max-width: 50%; */
+    }
+
+    .search-section:last-child {
+        margin-bottom: 0;
+    }
+
+    .search-button {
+        margin-top: 10px;
+    }
+
+ .searchandCard{
+        padding: 24px !important;
+    } 
+
+
+    .mobile-options {
+        display: flex;
+    /* display: block; */
+    flex-direction: row;
+    }
+
+    /* Show the modal when the button is clicked */
+    .options-button:focus + .options-modal {
+        display: block;
+    }
+    .desktop-options{
+        display: none;
+    }
+.options-button{
+    padding: 11px !important;
+}
+
+
+    .mobile-search-button{
+        display: block;
+    }
+    .search-button,.icon-class{
+        display: none;
+    }
+    
+
+}
+
+
+
+    @media (max-width: 768px) {
+        .search-section {
+            max-width: 50%; 
+            margin-bottom: 10px;
+        }
+    
+        .search-section:last-child {
+            margin-bottom: 0;
+        }
+} 
