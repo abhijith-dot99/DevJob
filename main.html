@@ -10,9 +10,15 @@
         <title>DevJob</title>
     </head>
     <body>
+        <!-- Blurred overlay for the background -->
+        <div class="modal-overlay"></div>
         <div class="topnav">
-            <div class="devandtoggle">
+            <img class="top-img" src="images\svgviewer-output.svg" alt="">
+            <img class="top-img-1"src="images\svgviewer.svg" alt="">
 
+           
+            
+            <div class="devandtoggle">
                 <div class="DevJob">
                     <h1 id="devjobs">devjobs</h1>
                 </div>
@@ -36,14 +42,18 @@
                     </svg>
                 </div>
             </div>
-
-
         </div>
-        <div class="searchandCard">
-          
 
+
+
+
+
+
+        
+
+        <div class="searchandCard">
             <div class="search-area">
-                <di v class="search-section">
+                <div class="search-section">
                     <div class="icon-class">
                         <!-- SVG icon for search by titles -->
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,9 +69,9 @@
                         type="text"
                         id="searchInput"
                         placeholder="Filter by titles,companies,expertise..."
-                        style="border: none; width: 100%;" 
+                        style="border: none; width: 100%; font-size: 16px; font-family: 'Kumbh Sans'"
                     />
-                </di>
+                </div>
 
                 <div class="desktop-options">
                     <div class="search-section">
@@ -76,29 +86,34 @@
                                 />
                             </svg>
                         </div>
-                        <input type="text" id="searchLocationInput" placeholder="Search by location" style="border: none" />
+                        <input
+                            type="text"
+                            id="searchLocationInput"
+                            placeholder="Search by location..."
+                            style="border: none; font-size: 16px; font-family: 'Kumbh Sans'; width: 100%;"
+                        />
                     </div>
-                    <div class="search-section">
+                    <div class="search-section1">
                         <label class="check-box">
                             <input type="checkbox" id="fulltime" />
                             Full Time
                         </label>
                     </div>
 
-                    <button class="search-button" id="searchButton">search</button>
+                    <button class="search-button" id="searchButton">Search</button>
 
                     <!-- Modal -->
                     <div id="myModal" class="modal">
                         <div class="modal-content">
                             <span class="close">&times;</span>
-                            <p style="color: red;">Sorry, no results found.</p>
+                            <p style="color: red">Sorry, no results found.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Mobile options section (same as before) -->
                 <div class="mobile-options">
-                    <button class="options-button" style="display: flex; flex-direction: row;">
+                    <div class="options-button" id="modalIcon" style="display: flex; flex-direction: row">
                         <!-- SVG icon for opening options -->
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -106,10 +121,17 @@
                                 fill="#6E8098"
                             />
                         </svg>
-                     
-                    </button>
-                    <div class="mobile-search-button">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    </div>
+                    <!-- <button class="search-button" id="searchButton">search</button> -->
+                    <div id="searchButton1">
+                        <svg
+                            id="searchButton2"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
                             <rect width="48" height="48" rx="5" fill="#5964E0" />
                             <path
                                 fill-rule="evenodd"
@@ -120,38 +142,46 @@
                         </svg>
                     </div>
 
-                    <div class="options-modal">
+                    <div class="options-modal" id="optionsModal">
                         <div class="options-content">
-                            <label>
-                                <input type="text" />
-                                Search by Location
+                            <label style="display: flex">
+                                <img src="images\placeholder 2 (1).svg" alt="" />
+
+                                <input type="text" id="modalSearchInput" placeholder="Filter by location" />
                             </label>
                             <label>
-                                <input type="checkbox" />
-                                Full Time
+                                <hr />
+                                <input type="checkbox" id="modalFullTime" style="font-size: 16px; font-weight: 700" />
+                                Full Time Only
                             </label>
+                            <div class="search-button-mobile">
+                                <button id="searchButton3" style="width: 100%">search</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="card-container" id="cardContainer"></div>
+            <div class="card-container" id="cardContainer" data-job-id="1"></div>
         </div>
-
 
         <!-- for jobdetails -->
         <div class="job-details" id="jobDetails">
-            
+            <div class="main-in">
+                <div class="job-title-bar1"></div>
+            </div>
+            <div class="job-content">
+                <div class="job-details-main"></div>
+                <div class="job-description"></div>
+                <div class="job-requirements"></div>
+                <div class="job-youdo"></div>
+                <div class="main-out"></div>
+            </div>
+            <div class="footer"></div>
         </div>
-        
-
-
-
-
-
-
 
         <div class="loadmore-btn"><button type="button" name="myButton">Load More</button></div>
-        <script src="sctipt.js"></script>
+
+        <script src="script.js"></script>
     </body>
 </html>
